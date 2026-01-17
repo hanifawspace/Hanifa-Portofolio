@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4c2467;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+  position: relative;
+}
+nav a:hover {
+  color: #fbbc04;
+}
+
+
+nav a.active {
+  color: #fbbc04;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fbbc04;
+  left: 0;
+  bottom: -6px;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fbbc04;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav:hover a.active {
+  color: white;
+}
+
+nav:hover a.active::after {
+  width: 0;
+}
+
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 80px 300px;
+  min-height: calc(100vh - 100px);
+}
+
+
+
+
+.hero-text {
+  max-width: 520px;
+}
+
+.greeting {
+  color: #fbbc04;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.highlight {
+  color: #fbbc04;
+}
+
+.desc {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 14px 30px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fbbc04;
+  color: black;
+  border-color: #fbbc04;
+}
+a.btn {
+  text-decoration: none;
+}
+
+
+/* IMAGE */
+.hero-image img {
+  width: 380px;
+
+}
+
+
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 100px 60px;
+  background-color: #000;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.about-image img {
+  width: 360px;
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-content h2 {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* BIODATA */
+.about-info div {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #bbb;
+}
+
+.about-info span {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  width: 140px;
+}
+
+/* EXPERIENCE SECTION */
+.experience-section {
+  padding: 120px 60px;
+  background-color: #4c2467;
+}
+
+.experience-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TITLE */
+.experience-title {
+  font-size: 56px;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.experience-title span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: -1;
+}
+
+/* GRID */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.experience-card {
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.year {
+  color: #fbbc04;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.experience-card h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.company {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.experience-card p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.projects-section {
+  padding: 100px 8%;
+  background-color: #000;
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  text-align: center;
+  color: #aaa;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin: 16px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #bbb;
+  margin: 0 16px 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 200, 0, 0.2);
+}
+.skills-section {
+  padding: 100px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kiri, 3 kanan */
+  gap: 25px;
+}
+
+
+.skill-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: #f5c542;
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.skill-card p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.skill-level {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Level colors */
+.skill-level.beginner {
+  background-color: #444;
+  color: #fff;
+}
+
+.skill-level.intermediate {
+  background-color: #f5c542;
+  color: #000;
+}
+
+.skill-level.advanced {
+  background-color: #ffb703;
+  color: #000;
+}
+.stars {
+  color: #f5c542;
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+.hero-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px; /* ⬅️ INI YANG NGATUR JARAK TEKS & FOTO */
+}
+.hero-slide {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.hero-slide.active {
+  display: flex;
+}
+
+.project-link,
+.project-link:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus {
+  color: #fbbc04;
+}
+.about-info a,
+.about-info a:visited,
+.about-info a:hover,
+.about-info a:active {
+  color: #f5c400;        
+}
+.certificate-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #f5c400; /* kuning */
+  color: #4c2467; /* ungu background kamu */
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.certificate-btn:hover {
+  background-color: #ffd633;
+  transform: translateY(-2px);
+}
